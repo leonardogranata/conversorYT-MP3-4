@@ -1,0 +1,80 @@
+# ────────────────────────────────────────────
+# PYTHON / DJANGO
+# ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+venv/
+env/
+ENV/
+env.bak/
+
+# Arquivos de configuração sensíveis
+*.env
+*.env.*
+.envrc
+
+# Logs
+*.log
+logs/
+debug.log
+
+# SQLite (se usar)
+db.sqlite3
+db.sqlite3-journal
+
+# Arquivos compilados
+*.pot
+*.pyc
+
+# Pasta de migrações (somente arquivos auto-gerados)
+*/migrations/**/*.py
+!*/migrations/__init__.py
+
+
+# Media
+media/
+
+# Django cache
+*.cache
+*.mo
+
+# ────────────────────────────────────────────
+# FRONT-END
+# ────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ────────────────────────────────────────────
+# VS CODE / IDEs
+# ────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ────────────────────────────────────────────
+# TEMP / BUILD
+# ────────────────────────────────────────────
+dist/
+build/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# yt-dlp leftovers
+*.part
+*.ytdl
+*.mkv
+*.mp4.part
+*.mp3.part
+
+# ────────────────────────────────────────────
+# DOCKER
+# ────────────────────────────────────────────
+docker-compose.override.yml
+*.pid
