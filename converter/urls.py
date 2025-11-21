@@ -1,6 +1,7 @@
-from .views import index
+from .views import index, baixarVideos
 from django.urls import path
 
 urlpatterns = [
-    path('home/', index, name='home'),
+    path('', index, name='home'),
+    path('baixar/', baixarVideos, name='baixarVideos'),
 ]

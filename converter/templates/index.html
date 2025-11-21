@@ -1,7 +1,42 @@
 {% extends "base.html" %}
 {% block title %}Início - YT MP3{% endblock %}
-
 {% block content %}
-<h2>Bem-vindo ao YT MP3 Converter</h2>
-<p>Converta seus vídeos do YouTube em arquivos MP3 de forma rápida e fácil.</p>
+
+<section id="inicio">
+    <h2>Bem-vindo ao YT MP3 Converter</h2>
+    <p>Converta seus vídeos do YouTube em arquivos MP3 ou MP4 de forma rápida e fácil.</p>
+
+    <form action="{% url 'baixarVideos' %}" method="get">
+        <input type="text" name="url" placeholder="Cole a URL do vídeo...">
+
+        <div class="format-options">
+            <label>
+                <input type="radio" name="formato" value="mp3" checked>
+                MP3
+            </label>
+
+            <label>
+                <input type="radio" name="formato" value="mp4">
+                MP4
+            </label>
+        </div>
+
+        <button type="submit">Converter</button>
+    </form>
+</section>
+
+<section id="sobre">
+    <h2>Sobre</h2>
+    <p>O YT MP3 Converter é uma ferramenta gratuita que permite baixar áudios e vídeos do YouTube de forma simples e rápida.</p>
+    <p>Basta colar o link do vídeo, escolher o formato desejado (MP3 ou MP4) e clicar em converter. Nosso sistema processa seu pedido e disponibiliza o arquivo para download em segundos.</p>
+    <p>Perfeito para criar playlists offline, salvar conteúdo educacional ou guardar seus vídeos favoritos.</p>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+    <p><strong>Email:</strong> contato@ytmp3converter.com</p>
+    <p><strong>Redes Sociais:</strong> @ytmp3converter</p>
+</section>
+
 {% endblock %}
