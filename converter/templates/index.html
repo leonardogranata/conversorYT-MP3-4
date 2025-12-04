@@ -22,6 +22,12 @@
         </div>
 
         <button type="submit">Converter</button>
+        {% if erro %}
+            <div class="erro-msg">
+                {{ erro }}
+            </div>
+        {% endif %}
+
     </form>
 </section>
 

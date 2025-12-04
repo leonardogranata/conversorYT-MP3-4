@@ -50,8 +50,13 @@ def baixarVideos(request):
         try:
             with YoutubeDL(ydl_opts) as ydl:
                 info = ydl.extract_info(url, download=True)
-        except Exception as e:
-            raise Http404(f"Erro ao baixar/convert: {e}")
+        except Exception:
+            return render(
+                request,
+                'converter/index.html',
+                {"erro": "URL inválida ou vídeo indisponível. Verifique o link e tente novamente."}
+            )
+
 
         # acha o arquivo final
         final_file = None
